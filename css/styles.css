@@ -1,0 +1,349 @@
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+.logo a{
+  letter-spacing: 5px;
+  color: #EF820D;
+  text-decoration: none;
+}
+.logo h4{
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Kaushan Script', cursive;
+}
+.logo img{
+  height: 16vh;
+  justify-content: center;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.nav-links a{
+  color: #EF820D;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.nav-links li{
+  list-style: none;
+  font-family: 'Poiret One', cursive;
+}
+ul li.active a{
+  text-shadow: 0px 0px 5px #D7722C;
+  color: white;
+}
+.burger div{
+  background-color: #EF820D;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+}
+.burger{
+  display: none;
+}
+
+
+@media screen and (max-width:768px){
+   .nav-links {
+     width: 60%;
+  }
+}
+@media screen and (max-width:425px){
+    body{
+      overflow-x: hidden;
+    }
+   .nav-links{
+     position: absolute;
+     right: 0px;
+     height: 92vh;
+     top: 8vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     transform: translateX(100%);
+     transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+  }
+}
+  .nav-active{
+    transition: translateX(0%)
+  }
+  @keyframe navLinkfade{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to{
+      opacity: 0;
+      transform: translateX(0px);
+    }
+  }
+  #cart-items {
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    z-index: 999;
+    border: 0px !important;
+    display: none;
+  }
+
+
+  #items-basket {
+    position: absolute;
+    display: none;
+    top: -5px;
+    left: -10px;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background: red;
+    color: white;
+
+  }
+
+  .cart {
+    float: right;
+    text-align: center;
+    color: gray;
+    position: relative;
+  }
+
+  .remove {
+    color: Red;
+  }
+
+
+
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  section {
+    min-height: 100%;
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+    background-color: var(--secondary);
+  }
+
+  .footer a {
+    color: black;
+  }
+
+  #header-img:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+    /*transform: rotate(720deg);
+    -ms-transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+    transition: all 1s;*/
+  }
+
+  @keyframes Rotateme {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(90deg);
+    }
+
+    50% {
+      transform: rotate(270deg);
+    }
+
+    75% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  #header-img {
+    animation-duration: 1s;
+    animation-name: Rotateme;
+    animation-iteration-count: infinite;
+  }
+
+
+  /* Hidden and visible elemnt from Bootsrap3.0 */
+  /*\
+   * Restore Bootstrap 3 "hidden" utility classes.
+  \*/
+
+  /* Breakpoint XS */
+  @media (max-width: 575px) {
+
+    .hidden-xs-down,
+    .hidden-sm-down,
+    .hidden-md-down,
+    .hidden-lg-down,
+    .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-unless-sm,
+    .hidden-unless-md,
+    .hidden-unless-lg,
+    .hidden-unless-xl {
+      display: none !important;
+    }
+
+  }
+
+  /* Breakpoint SM */
+  @media (min-width: 576px) and (max-width: 767px) {
+
+    .hidden-sm-down,
+    .hidden-md-down,
+    .hidden-lg-down,
+    .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-unless-xs,
+    .hidden-unless-md,
+    .hidden-unless-lg,
+    .hidden-unless-xl {
+      display: none !important;
+    }
+  }
+
+  /* Breakpoint MD */
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    .hidden-md-down,
+    .hidden-lg-down,
+    .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-md-up,
+    .hidden-unless-xs,
+    .hidden-unless-sm,
+    .hidden-unless-lg,
+    .hidden-unless-xl {
+      display: none !important;
+    }
+  }
+
+  /* Breakpoint LG */
+  @media (min-width: 992px) and (max-width: 1199px) {
+
+    .hidden-lg-down,
+    .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-md-up,
+    .hidden-lg-up,
+    .hidden-unless-xs,
+    .hidden-unless-sm,
+    .hidden-unless-md,
+    .hidden-unless-xl {
+      display: none !important;
+    }
+  }
+
+  /* Breakpoint XL */
+  @media (min-width: 1200px) {
+
+    .hidden-xl-down,
+    .hidden-xs-up,
+    .hidden-sm-up,
+    .hidden-md-up,
+    .hidden-lg-up,
+    .hidden-xl-up,
+    .hidden-unless-xs,
+    .hidden-unless-sm,
+    .hidden-unless-md,
+    .hidden-unless-lg {
+      display: none !important;
+    }
+  }
+
+  #mpesa {
+    display: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  #mpesab {
+    display: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  #airtel {
+    display: none;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  #airtelb {
+    display: none;
+    border-radius: 5px;
+    margin-top: 10px;
+
+  }
+
+  #visa {
+    display: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  #visab {
+    display: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  #mp {
+    border-radius: 90px;
+    background-color: rgba(38, 216, 38, 0.822);
+    padding: 3px;
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif !important;
+  }
+
+  #am {
+    border-radius: 90px;
+    background-color: rgba(233, 15, 15, 0.822);
+    padding: 3px;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  #vs {
+    border-radius: 90px;
+    background-color: rgba(78, 68, 219, 0.925);
+    padding: 3px;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 15px;
+  }
+
+  .img-thumbnail {
+    width: 100%;
+    height: 283px !important;
+
+  }
