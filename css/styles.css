@@ -2,7 +2,12 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 16vh;
+  background-color: #812B73;
+}
+.logo{
+  display: flex;
+  align-items: center;
 }
 .logo a{
   letter-spacing: 5px;
@@ -24,7 +29,7 @@ nav{
   width: 40%;
 }
 .nav-links a{
-  color: #EF820D;
+  color: #15ACC0;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
