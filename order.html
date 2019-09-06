@@ -1,12 +1,384 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+  <title> ORDER</title>
+  <!-- google fonts -->
+  <!-- css stylesheet -->
+  <link rel="stylesheet" href="order.css">
+  <!-- font awesome -->
+  <script defer src="https:use.fontawesome.com/releases/v5.8.0/js/all.js"></script>
+  <!-- bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Kaushan+Script|Poiret+One&display=swap"
+    rel="stylesheet">
+
 </head>
+
 <body>
-    
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="nav-bar">
+    <div class="container">
+
+      <a class="navbar-brand" href="index.html"><img id="bounce" src="images/logo.png" alt="logo" 1 /> <span
+          class=" hidden-sm-down ">Home</span> <span class="hidden-md-up"> SS
+        </span></a>
+
+      <div class="" id="navbarResponsive">
+        <ul class="navbar-expand navbar-nav ml-auto">
+
+          <li class="nav-item pl-2 pr-2">
+            <a class="nav-link js-scroll-trigger" href="#Product"> <i class="fas fa-list-alt hidden-md-up"></i> <span
+                class="hidden-sm-down">Product
+              </span></a>
+          </li>
+
+          <li class="nav-item pl-2 pr-2" style="border-bottom:1px solid gray;">
+            <div class="cart">
+              <i class="fa fa-shopping-basket fa-2x"></i>
+              <i class="fa fa-caret-down"></i>
+              <!--br-->
+              <span id="items-basket" class="text-center align-top">0</span>
+            </div>
+            <div id="cart-items" class="bg-dark card text-white text-center col-lg-3 col-md-3 col-sm-6 col-xs-6">
+              <div class="card-body">
+                <span id="emptyCart">Your shopping cart is EMPTY </span>
+                <ol class="list-group list-group-flush" id="list-item">
+                </ol>
+
+              </div>
+              <div class="card-title">Total : <span id="total-price">ksh0</span></div>
+              <p>Payment Options:</p>
+
+              <button id="mp">CHECKOUT MPESA</button>
+              <input type="tel" id="mpesa" placeholder="ENTER YOUR NUMBER"></input>
+              <button id="mpesab" onclick="mp()">PAY</button>
+              <br>
+
+              <button id="am">CHECKOUT AIRTEL</button>
+              <input type="tel" id="airtel" placeholder="ENTER YOUR NUMBER"></input>
+              <button id="airtelb" onclick="am()">PAY</button>
+              <br>
+
+              <button id="vs">CHECKOUT VISA</button>
+              <input type="tel" id="visa" placeholder="ENTER CARD NUMBER"></input>
+              <button id="visab" onclick="vs()">PAY</button>
+
+              <!--<ol id="list-item">
+				  </ol>
+
+				  <div class="total-text">
+					<p>Total: </p>
+					<p id="total-price"></p>
+				  </div>-->
+            </div>
+            <!--i class="fas fa-shopping-bag shopping-cart nav-link"></i-->
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <section id="Product">
+    <div class="container">
+
+      <div class="row mt-5 mb-3">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h2 class="align-left">Product list
+          </h2>
+        </div>
+        <!--div class="col-1 text-right my-auto" >
+		   <i class="fa fa-shopping-cart shopping-cart" style="font-size:5em;"></i>
+		  </div-->
+      </div>
+      <div class="row justify-content-center align-items-start">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail" src="images/afrigas-13-kg-Complete-300x300.png" alt="" />
+
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">Afrigas complete set</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                ksh6500.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail"
+              src="images/hashi-gas-set-with-6-kg-gas-cylinder-6kg-pressure-regulator-2-meter-horse-pipe-yellow.jpg"
+              alt="" />
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">Hashi gas complete set</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                ksh3400
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail" src="images/SHELL AFRIGAS 6KG REFILL1-800x800.png" alt="" />
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">Afrigas complete set</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                ksh3300.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail" src="images/Pro-Gas-6kg.jpg" alt="" />
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">6kg Pro gas</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                ksh2300.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail" src="images/Pro-Gas-13kg-Complete.jpg" alt="" />
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">ProGas 13kg complete set</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                ksh4000.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <div class="safe">
+              <img class="img-thumbnail" src="images/00_mn9a-9o_r84h-ze_k0wy-tq.jpg" alt="" />
+            </div>
+
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">Safe gas Complete set</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                8000.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail" src="images/13kg total.png" alt="" />
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">Total Gas 13kg</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                ksh3500.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+          <div class="item">
+            <img class="img-thumbnail" src="images/TOTAL 6KG REFILL-200x200.png" alt="" />
+            <div class="row text-center">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h4 class="product-name">Total gas 6kg</h4>
+              </div>
+              <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                2500.00
+              </div>
+              <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- new items -->
+        <div class="row mt-5 mb-3">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h2 class="align-left">Accessories
+            </h2>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+
+              <img class="img-thumbnail" src="images/13kg grill.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">3Kg Meko Grill</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  ksh270.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/13kg grill.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">6Kg Meko Grill </h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  Ksh370.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/6Kg & 3Kg Burner.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">6Kg & 3Kg Burner </h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  ksh820.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/High Pressure Regulator.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">High Pressure Regulator</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  ksh2450.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/Low Pressure Regulator.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">Low Pressure Regulator</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  780.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/table.jpg" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">Gas Cooker Table Top</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  ksh3500.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/pipe.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">Low Pressure Hose Pipe</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  ksh500.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-3 mt-3">
+            <div class="item">
+              <img class="img-thumbnail" src="images/pipe.png" alt="" />
+              <div class="row text-center">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <h4 class="product-name">High Pressure Hose Pipe</h4>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 product-price">
+                  ksh550.00
+                </div>
+                <div class="col-lg-6 col-md- col-xs-12 col-sm-12">
+                  <button class="btn btn-success add-to-cart" type="button">Add to cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+  </section>
+
+
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+
 </body>
+
 </html>
